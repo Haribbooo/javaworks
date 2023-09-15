@@ -1,0 +1,14 @@
+package kr.or.iei.model;
+
+public class User {
+	private String id;
+	private String pw;
+	private String name;
+	
+	//set 필드이름 () ,get 필드이름 ()함수
+	
+	Public void setId(String id) {
+		this.id = id;
+		
+	}
+}

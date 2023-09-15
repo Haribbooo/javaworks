@@ -1,0 +1,10 @@
+package kr.or.iei.Model;
+
+//회원 클래스 자료형 만들기
+public class User {
+	//필드 속성
+	
+	Public String id;
+	private String pw;
+	private String name;
+}

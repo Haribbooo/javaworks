@@ -1,0 +1,11 @@
+package classes.methods;
+
+public class Hello {
+	//기본생성자
+	//public Hello(){} 생략된 부분임 없어도 된다
+	//sayHello() 매서드 정의
+
+	public void sayHello() {
+		System.out.println("watup");
+	}
+}

@@ -1,0 +1,17 @@
+package customers;
+
+public class CustomerTest1 {
+
+	public static void main(String[] args) {
+		//일반 고객 1명 ,vip 고객 1명
+		Customer lee = new Customer();
+		
+		//입력
+		lee.setCustomerId(1001);
+		lee.setCustomerName("최은호");
+		
+		//출력
+		lee.showCustomerInfo();
+	}
+
+}

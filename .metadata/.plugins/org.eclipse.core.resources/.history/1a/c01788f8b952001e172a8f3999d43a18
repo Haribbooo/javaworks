@@ -1,0 +1,26 @@
+package kr.or.iei.model;
+
+public class User {
+	
+	private String userId;
+	private int pwd;
+	private String userName;
+	
+	
+	public User(String userId,int pw,String userName) {
+		this.userId = userId;
+		this.pwd =pwd;
+		this.userName= userName;
+	}
+	
+	public String getUserId() {
+		return userId;
+	}
+	public int getPwd() {
+		return pwd;
+	}
+	public String getUserName() {
+		return userName;
+	}
+
+}	

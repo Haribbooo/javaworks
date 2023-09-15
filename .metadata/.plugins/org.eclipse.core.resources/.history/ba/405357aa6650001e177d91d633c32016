@@ -1,0 +1,12 @@
+package thissamples;
+
+public class Birthday {
+	//3개의 필드
+	int day;
+	int month;
+	int year;
+	
+	public void setyear(int year){
+		this.year =year;
+	}
+}

@@ -1,0 +1,20 @@
+package inheritance.ariplane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SuperSonicAirPlane sa =new SuperSonicAirPlane();
+		
+		sa.이륙();
+		sa.비행();
+		
+		sa.flyMode = sa.SUPERSONIC; //모드 변경
+		sa.비행();
+		
+		sa.착륙();
+		
+		
+
+	}
+
+}

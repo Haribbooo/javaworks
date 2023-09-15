@@ -1,0 +1,32 @@
+package reference.subjects;
+
+public class StudentName {
+
+	public static void main(String[] args) {
+		
+		/*
+		Student std1 =new Student(101,"최은호");
+		Student std2 =new Student(102,"김희린");
+		
+		//과목 추가
+		std1.koreanSubject("국어", 98);
+		std1.mathSubject("수학", 100);
+		std2.koreanSubject("국어", 97);
+		std2.mathSubject("수학", 99);
+		//학생 정보 출력
+		std1.showStudentInfo();
+		System.out.println("========================");
+		std2.showStudentInfo();*/
+		
+		//객체 배열 사용
+		Student[] students = {
+			new Student(101,"최은호"),
+			new Student(102,"김희린"),
+			new Student(103,"함소연")
+		};
+		students[0].koreanSubject("국어", 98);
+		students[0].mathSubject("수학", 80);
+		students[0].showStudentInfo();
+	}
+
+}

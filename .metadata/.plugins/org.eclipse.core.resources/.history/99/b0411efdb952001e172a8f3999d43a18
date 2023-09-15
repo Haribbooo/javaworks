@@ -1,0 +1,23 @@
+package kr.or.iei.run;
+
+import kr.or.iei.model.User;
+
+public class UserTest {
+
+	public static void main(String[] args) {
+		
+		//크기가 3인 배열을 생성
+		User[] users = new User[3];
+		
+		User user1 = new User("titi", 111,"sadf");
+		User user2 = new User("heehee", 1028,"sadf");
+		User user3 = new User("soso", 111,"728");
+		
+		users[0] = user1;
+		users[1] = user2;
+		users[2] = user3;
+		
+
+	}
+
+}

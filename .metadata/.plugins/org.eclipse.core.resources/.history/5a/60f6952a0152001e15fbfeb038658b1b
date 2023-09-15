@@ -1,0 +1,8 @@
+package polymophism.fruits;
+
+public class Banana extends Furit{
+	
+	public Banana() {
+		
+	}
+}

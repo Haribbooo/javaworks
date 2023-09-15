@@ -1,0 +1,7 @@
+package kr.or.iei.model;
+
+public class Useragain {
+	private String userName;
+	private int pw;
+	private String Name;
+}
