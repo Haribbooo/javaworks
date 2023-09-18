@@ -25,12 +25,11 @@ public class VIPCustomer extends Customer{
 	public int calcPrice(int price) {
 		price -=(int)(price*saleRatio);
 		bonusPoint +=(int)( price*bonusRatio);
-		return super.calcPrice(price);
+		return price;
 	}
 	@Override
 	public String showCustomerInfo() {
-		return super.showCustomerInfo() + "\n전문상담원ID는 "+
-										 agentId+"입니다.";
+		return super.showCustomerInfo() + "\n전문상담원ID는 "+ agentId+"입니다.";
 	}
 	
 	

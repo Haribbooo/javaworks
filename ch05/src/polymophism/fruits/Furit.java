@@ -2,9 +2,9 @@ package polymophism.fruits;
 
 public class Furit {
 	//필드
-	String name;
-	String weight;
-	int price;
+	protected String name;
+	protected String weight;
+	protected int price;
 	
 	public Furit() {}
 	

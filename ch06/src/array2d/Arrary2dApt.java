@@ -13,7 +13,7 @@ public class Arrary2dApt {
 		System.out.printf("4층 %d세대\n",household[3].length);
 		System.out.printf("3층 %d세대\n",household[2].length);
 		System.out.printf("2층 %d세대\n",household[1].length);
-		System.out.printf("1층 %d세대\n",household[0].length);
+		System.out.printf("1층 %d세대\n",household[0].length); // .length는 열의 크기 
 
 	}
 

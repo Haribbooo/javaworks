@@ -32,7 +32,7 @@ class Eagle extends Animal{
 class Tiger extends Animal{
 
 	@Override
-	public void move() {
+	public void move() {  //static 안하는 이유는 new 쓰려고 하는것 55번줄~57번줄 
 		System.out.println("호랑이뛰는중..");
 	}	
 }
@@ -50,13 +50,17 @@ public class AnimalTest {
 	public static void main(String[] args) {
 		
 		AnimalTest aTest = new AnimalTest();
-		Animal human = new Human();
+		
+		//다향성(Animal 타입으로 객체 생성
+		Animal human = new Human();  //
 		Animal eagle = new Eagle();
 		Animal tiger = new Tiger();
 		
 		aTest.moveAnimal( human); // Animal animal = new Human ;
 		aTest.moveAnimal( eagle);
 		aTest.moveAnimal( tiger);
+		
+		//moveAnimal(human); //static를 붙인경우 호출한 상황으로 
 		
 
 	}
