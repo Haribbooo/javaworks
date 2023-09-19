@@ -1,0 +1,10 @@
+package stringmethod;
+
+public class StringCharAt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

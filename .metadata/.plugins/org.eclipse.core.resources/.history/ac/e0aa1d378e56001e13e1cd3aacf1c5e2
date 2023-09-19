@@ -1,0 +1,5 @@
+package inheritance.transport;
+
+public class Bus {
+
+}

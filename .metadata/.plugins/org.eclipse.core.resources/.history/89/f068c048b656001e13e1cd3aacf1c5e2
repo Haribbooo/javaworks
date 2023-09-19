@@ -1,0 +1,13 @@
+package interfaceex.scheduler;
+
+public class SchedulerTest {
+
+	public static void main(String[] args) {
+
+		Scheduler scheduler = new LeastJob();
+		scheduler.getNextCall();
+		scheduler.senCallToAgent();
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package abstracts.template;
+
+public class Car {
+
+}

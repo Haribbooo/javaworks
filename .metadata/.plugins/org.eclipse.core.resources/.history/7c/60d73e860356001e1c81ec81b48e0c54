@@ -1,0 +1,9 @@
+package booktest;
+
+public class Car extends AutoCar{
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package stringmethod;
+
+public class StringMethods2 {
+
+	public static void main(String[] args) {
+		//indexOf( )- 검색에 유용
+		//문자열이 시작되는 인덱스를 리턴합니닷 
+		String str = "Hello World Hello";
+		
+		int val = str.indexOf("Hello"); //앞에서 부터 찾음 
+		System.out.println(val);
+		
+		int val2 = str.lastIndexOf("Hello");	
+		System.out.println(val2);
+		
+		
+
+	}
+
+}

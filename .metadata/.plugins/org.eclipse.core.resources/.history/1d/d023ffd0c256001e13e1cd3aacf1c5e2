@@ -1,0 +1,15 @@
+package stringmethod;
+
+public class StringCharAt {
+
+	public static void main(String[] args) {
+		// 문자열 다루기
+		
+		String subject = " 자바 프 로 그 램 ";
+		
+		char ch = subject.charAt(0);
+		System.out.println(ch);
+
+	}
+
+}

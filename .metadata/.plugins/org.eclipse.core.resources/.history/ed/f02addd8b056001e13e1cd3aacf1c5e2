@@ -1,0 +1,29 @@
+package interfaceex.remocon;
+
+public class Television implements RemoteControl{
+	
+	//필드
+	private int volume;
+	
+
+	@Override
+	public void turnOn() {
+		System.out.println("널 너무나 사랑해서 난 tv를 켰어");
+		
+	}
+
+	@Override
+	public void turnOff() {
+		System.out.println("널 너무나 사랑해서 난 tv를 껐어");
+		
+	}
+
+	@Override
+	public void setVolume(int volume) {
+		this.volume = volume;
+		
+	}
+	
+	
+
+}

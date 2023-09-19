@@ -1,0 +1,11 @@
+package interfaceex.sorting;
+
+public interface Sort {
+	
+	public void getascending();
+	
+	public void getdescending();
+	
+	public void description();
+
+}

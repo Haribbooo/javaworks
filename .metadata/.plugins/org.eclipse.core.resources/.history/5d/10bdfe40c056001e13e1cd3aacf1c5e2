@@ -1,0 +1,34 @@
+package interfaceex.sorting;
+
+public class BubbleSort implements Sort {
+
+	@Override
+	public void getascending() {
+		System.out.println(" BubbleSort ascending");
+		
+	}
+
+	@Override
+	public void getdescending() {
+		System.out.println(" BubbleSort ascending");
+		
+	}
+
+	@Override
+	public void description() {
+		System.out.println("숫자를 정렬하는 알고리즘입니다.");
+		
+	}
+
+	@Override
+	public void ascending(int[] arr) {
+		arr[0]=1;
+	}
+
+	@Override
+	public void decending(int[] arr) {
+		arr[0]=1;
+		
+	}
+
+}
