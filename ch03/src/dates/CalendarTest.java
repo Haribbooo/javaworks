@@ -31,11 +31,11 @@ public class CalendarTest {
 		System.out.println(days[day-1]);
 		
 		//시간
-		System.out.println(cal.get(Calendar.HOUR)+"시");
+		System.out.print(cal.get(Calendar.HOUR)+"시");
 		//분
-		System.out.println(cal.get(Calendar.MINUTE)+"분");
+		System.out.print(cal.get(Calendar.MINUTE)+"분");
 		//초
-		System.out.println(cal.get(Calendar.SECOND)+"초");
+		System.out.print(cal.get(Calendar.SECOND)+"초");
 	}
 				
 }

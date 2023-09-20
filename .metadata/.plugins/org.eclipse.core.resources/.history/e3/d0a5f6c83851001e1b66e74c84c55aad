@@ -1,6 +1,0 @@
-package inheritance.ariplane;
-
-public class SuperSonicAirPlane extends AirPlane{
-	
-	
-}

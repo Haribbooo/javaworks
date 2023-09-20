@@ -23,4 +23,9 @@
     <fullyQualifiedTypeName name="kr.or.iei.model.vo.User"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.rmi.Remote"/>
+    <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControlTest"/>
+    <fullyQualifiedTypeName name="interfaceex.scheduler.priorityAllocation"/>
+    <fullyQualifiedTypeName name="stringmethod.StringCharAt"/>
 </qualifiedTypeNameHistroy>
