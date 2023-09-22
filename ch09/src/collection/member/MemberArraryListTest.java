@@ -26,7 +26,7 @@ public class MemberArraryListTest {
 		System.out.println("총 객체수 :" + memberList.getSize());
 		
 		//회원 목록 조회
-		memberList.showAllMember();
+		
 		
 
 	}

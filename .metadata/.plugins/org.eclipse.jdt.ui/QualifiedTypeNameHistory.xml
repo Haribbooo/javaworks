@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="kr.or.iei.model.User"/>
     <fullyQualifiedTypeName name="kr.or.iei.model.vo.User"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.rmi.Remote"/>
     <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControlTest"/>
     <fullyQualifiedTypeName name="interfaceex.scheduler.priorityAllocation"/>
@@ -39,5 +38,17 @@
     <fullyQualifiedTypeName name="MyRunnable"/>
     <fullyQualifiedTypeName name="nestedclass.interfaces.CallListener"/>
     <fullyQualifiedTypeName name="nestedclass.interfaces.MessageListener"/>
+    <fullyQualifiedTypeName name="exceptions.resource.MyResource"/>
+    <fullyQualifiedTypeName name="nestedclass.student.Student.Score"/>
     <fullyQualifiedTypeName name="nestedclass.interfaces.Button.OnClickListner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="collection.member.Member"/>
+    <fullyQualifiedTypeName name="collection.member.MemberArraryList"/>
 </qualifiedTypeNameHistroy>
