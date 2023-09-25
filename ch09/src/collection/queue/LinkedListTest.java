@@ -7,7 +7,7 @@ public class LinkedListTest {
 
 	public static void main(String[] args) {
 		
-		//QUeue - 선입선출 (FIfO)	
+		//QUeue - 선입선출 (FIFO)	
 		List<String> myList = new LinkedList<>();
 		
 		//자료 추가 
