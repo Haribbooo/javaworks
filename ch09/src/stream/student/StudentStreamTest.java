@@ -1,4 +1,4 @@
-package stream;
+package stream.student;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +19,7 @@ public class StudentStreamTest {
 			//System.out.println(std.getName()+" :" + std.getScore());
 			String name = std.getName();
 			int score = std.getScore();
-			System.out.println(name+" :" + score);
+			System.out.println(name+" : " + score);
 		});
 		
 		// 학생의 이름만 출력 

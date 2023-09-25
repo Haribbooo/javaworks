@@ -15,7 +15,7 @@ public class MyNumberTest {
 		};*/
 		number = x -> System.out.println(x+10);
 		
-		//calcuclate() 호출
+		//calculate() 호출
 		number.calculate(1);
 		
 		//어떤 수를 제곱하는 함수 구현

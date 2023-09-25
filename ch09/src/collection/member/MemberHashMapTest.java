@@ -12,7 +12,7 @@ public class MemberHashMapTest {
 		memberMap.addMember(new Member(1002,"김 구"));
 		memberMap.addMember(new Member(1003,"나석주"));
 		//회원 추가
-		memberMap.addMember(new Member(1002,"최은호씨"));
+		//memberMap.addMember(new Member(1004,"최은호"));
 		
 		System.out.println("총 객체 수 :"  + memberMap.getSize());
 		//회원 삭제
