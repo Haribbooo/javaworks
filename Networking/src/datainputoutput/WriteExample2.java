@@ -17,8 +17,7 @@ public class WriteExample2 {
 			os.write(array);
 			
 			os.flush();
-			os.close();
-			
+			os.close();			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

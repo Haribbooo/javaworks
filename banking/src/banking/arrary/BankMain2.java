@@ -40,7 +40,7 @@ public class BankMain2 {
 				}
 		} //while 
 		System.out.println("프로그램 종료");
-		 
+		scanner.close();
 
 	}//main 
 
@@ -68,7 +68,7 @@ public class BankMain2 {
 				for(int i =0; i< accounts.length; i++) {
 					if(accounts[i]==null) { //배열이 비어있을때 저장할수있도록 if문으로 처리 
 						accounts[i] = new Account(ano,owner,balance);
-						System.out.println("축하합니당~~ 계좌생성완료!");
+						System.out.println("계좌생성완료!");
 						break;//for 빠져나옴
 					}
 				}		
