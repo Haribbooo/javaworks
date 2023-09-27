@@ -37,11 +37,12 @@ public class DataInputOutputStreamTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//바이트 데이터 읽ㄱ
+		//바이트 데이터 읽기
 		try(InputStream is = new FileInputStream("./data.db");
 			DataInputStream dis = new DataInputStream(is)) {
 				//기본 타입 자료 읽기
 			
+		//파일에 쓴 순서대로 읽기
 		for(int i = 0; i<2 ; i++) {
 				int num = dis.readInt();
 				String name = dis.readUTF();

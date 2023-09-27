@@ -13,7 +13,7 @@ public class BufferedStreamTest {
 
 	public static void main(String[] args) {
 		String orginfile = "C:/File/MSMS.jpg";
-		String copyfile = "C:/File/MSMS3.jpg";
+		String copyfile = "C:/File/MSMS4.jpg";
 		long start ,end;
 		
 		//보조 스트림은 단독으로 쓸 수 없음

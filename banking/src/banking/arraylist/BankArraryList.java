@@ -3,6 +3,7 @@ package banking.arraylist;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import banking.arrary.Account;
 
@@ -17,9 +18,9 @@ boolean sw = true;
 		
 		while(sw) {
 			try {
-				System.out.println("===========================================");
-				System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
-				System.out.println("===========================================");
+				System.out.println("======================================================");
+				System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.계좌삭제	|6.종료" );
+				System.out.println("=======================================================");
 				System.out.println("선택 : ");
 				
 				//메뉴선택
@@ -36,7 +37,9 @@ boolean sw = true;
 					withdraw(); 	// 출금
 				}else if(selectNo ==5) {
 					sw =false;		//종료
-				}else {
+				}else if(selectNo ==5) {
+					sw =false;		//종료
+				}else{
 					System.out.println("지원되지 않는 기능!, 다시입력해 ㅋㅋ");
 				}
 				}catch(NumberFormatException e){
@@ -53,27 +56,37 @@ boolean sw = true;
 			System.out.println("-----------------------------------");
 			System.out.println("              계좌 생성");
 			System.out.println("-----------------------------------");
-			
+						
 			while(true) {
-				System.out.print("계좌 번호 : ");
+				System.out.print("계좌 번호 형식:##-##-### : ");
 				String ano = scanner.nextLine();
 				
-				//중복계좌있는지 체크 해보기 
-				if(findAccount(ano) != null) { //중복계좌가 있으면
-					System.out.println("중복");
-				}else { //중복계좌가 없으면
-					System.out.print("계좌주 : ");
-					String owner = scanner.nextLine();
-					
-					System.out.print("초기 입금액 : ");
-					int balance = Integer.parseInt(scanner.nextLine());
-					
-					//입력받은 내용을 매개변수로 계좌 생성함
-					Account newAccount = new Account(ano, owner,balance); 
-					accountList.add(newAccount); //리스트에 저장
-					System.out.println("계좌생성완료!");
-					break;
+				String regExp = "\\d{2}-\\d{2}-\\d{3}"; //정규 표현식 생성
+				boolean result = Pattern.matches(regExp, ano);
+				
+				if(result) {
+					//중복계좌있는지 체크 해보기 
+					if(findAccount(ano) != null) { //중복계좌가 있으면
+						System.out.println("중복");
+						
+					}else { //중복계좌가 없으면
+						System.out.print("계좌주 : ");
+						String owner = scanner.nextLine();
+						
+						System.out.print("초기 입금액 : ");
+						int balance = Integer.parseInt(scanner.nextLine());
+						
+						//입력받은 내용을 매개변수로 계좌 생성함
+						Account newAccount = new Account(ano, owner,balance); 
+						accountList.add(newAccount); //리스트에 저장
+						System.out.println("계좌생성완료!");
+						break;
+					}					
+				}else {
+					System.out.println("올바르지 않은 형식으로 입력하였습니다.다시입력해주세요");
 				}
+				
+				
 		}//while  끝
 	}//creatAcoount 끝 
 		

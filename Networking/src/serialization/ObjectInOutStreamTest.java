@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.util.Arrays;
 
 public class ObjectInOutStreamTest {
 
@@ -18,12 +19,15 @@ public class ObjectInOutStreamTest {
 				ObjectOutputStream oos = new ObjectOutputStream(os); 
 					
 				Member m1 = new Member("sky12", "최하늘");
+				Product p1 = new Product("핸드폰",1500000);
+				int[] number = {1, 2, 3, 4}; //
 				
 				//파일에 쓰기 
 				oos.writeObject(m1);
-				oos.flush();
-				
-			
+				oos.writeObject(p1);
+				oos.writeObject(number);
+								
+				oos.flush();	
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -32,7 +36,12 @@ public class ObjectInOutStreamTest {
 			ObjectInputStream ois = new ObjectInputStream(is)){
 			
 			Member m2 = (Member)ois.readObject();
+			Product p2 = (Product)ois.readObject();
+			int[] number2 =(int []) ois.readObject();
+			
 			System.out.println(m2);
+			System.out.println(p2);
+			System.out.println(Arrays.toString(number2));
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
