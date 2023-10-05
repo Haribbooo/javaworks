@@ -36,8 +36,8 @@ boolean sw = true;
 				}else if(selectNo ==4) {
 					withdraw(); 	// 출금
 				}else if(selectNo ==5) {
-					sw =false;		//종료
-				}else if(selectNo ==5) {
+					//deleteAno();	//계좌삭제
+				}else if(selectNo ==6) {
 					sw =false;		//종료
 				}else{
 					System.out.println("지원되지 않는 기능!, 다시입력해 ㅋㅋ");

@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class EcoServer {
 	
+	
 	//서버 소켓 객체 선언 
 	private static ServerSocket severSocket;
 
@@ -34,7 +35,7 @@ public class EcoServer {
 		
 		//tcp 서버 종료		
 		stopServer();
-	}
+	}//main 끝
 	
 	private static void startServer() {
 		//작업 스레드 생성
@@ -42,7 +43,7 @@ public class EcoServer {
 			@Override
 			public void run() {
 				try {
-					severSocket = new ServerSocket(50001);
+					severSocket = new ServerSocket(8001);
 					System.out.println("[서버] 시작됨");
 					
 					while(true) {
@@ -60,9 +61,9 @@ public class EcoServer {
 						//클라이언트가 보낸 데이터 받기(읽기)
 						InputStream is = socket.getInputStream();
 						byte[] bytes = new byte[1024];//데이터를 저장할 배열 선언
-						int readBytes = is.read(bytes);
+						int readBytes = is.read(bytes);// 데이터를 읽은 바이트 수 
 						//데이터를 문자열로 생성 - 디코딩 
-						String message = new String(bytes,0 ,readBytes, "utf-8");
+						String message = new String(bytes, 0 , readBytes , "utf-8");
 						
 						//받은 데이터 보내기
 						OutputStream os = socket.getOutputStream();

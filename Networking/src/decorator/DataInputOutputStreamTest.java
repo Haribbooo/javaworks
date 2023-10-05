@@ -17,7 +17,7 @@ public class DataInputOutputStreamTest {
 		try {
 			//기반 스트림 객체 생성
 			OutputStream os = new FileOutputStream("./data.db");
-			//보조 스트림 객체 생성
+			//보조 스트림 객체 생성 , 혼자 쓸 수 없다. 기본스트림에 연결해야됌
 			DataOutputStream dos = new DataOutputStream(os);
 			
 			//기본 타입 자료 쓰기

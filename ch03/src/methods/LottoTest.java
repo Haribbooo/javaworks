@@ -1,5 +1,7 @@
 package methods;
 
+import java.util.Arrays;
+
 public class LottoTest {
 
 	public static void main(String[] args) {
@@ -15,8 +17,7 @@ public class LottoTest {
 		
 		//6개를 동시에 생성
 		for(int i = 0; i< lotto.length; i++) {
-			lotto[i] = (int)(Math.random()*45 +1);
-			
+			lotto[i] = (int)(Math.random()*45 +1);							
 			//중복 문제를 해결하려면 = 중복 for 생성
 			for(int j = 0; j< i; j++) {
 				if(lotto[i] == lotto[j]) {
@@ -31,7 +32,7 @@ public class LottoTest {
 		}
 		//파일이름 출력
 		LottoTest lottoTest = new LottoTest();
-		System.out.println(lottoTest);
+		System.out.println(Arrays.toString(lotto));
 	}
 		
 }

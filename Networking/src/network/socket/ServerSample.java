@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+//TCP (Transmission control Protocol) 네트워킹
 public class ServerSample {
 	
 	//서버 소켓 객체 선언 
@@ -24,9 +25,7 @@ public class ServerSample {
 			String key = scanner.nextLine();
 			if(key.toLowerCase().equals("q"));
 				break;
-		}
-		
-		
+		}			
 				
 		scanner.close();
 		
@@ -40,12 +39,12 @@ public class ServerSample {
 			@Override
 			public void run() {
 				try {
-					severSocket = new ServerSocket(50001);
+					severSocket = new ServerSocket(8001); //client와 같은 포트번호 입력
 					System.out.println("[서버] 시작됨");
 					
 					while(true) {
 						System.out.println("\n[서버] 연결 요청을 기다림\n");
-						//클라이언트와 통신할 소켓 생성
+						//클라이언트와 통신할 소켓 생성 (중요 시험 나옴)
 						Socket socket = severSocket.accept();
 						
 						//IP주소 알아내기
