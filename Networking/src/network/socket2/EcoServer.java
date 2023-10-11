@@ -7,6 +7,7 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
 
 public class EcoServer {
 	
@@ -51,6 +52,9 @@ public class EcoServer {
 						//클라이언트와 통신할 소켓 생성
 						Socket socket = severSocket.accept();
 						
+						//서버의 동시 처리( 스레드 풀 사용)
+						//Runable 함수형 인터페이스 이므로 람다식으로 
+					
 						//IP주소 알아내기
 						InetSocketAddress isa = 
 								(InetSocketAddress) socket.getRemoteSocketAddress();
