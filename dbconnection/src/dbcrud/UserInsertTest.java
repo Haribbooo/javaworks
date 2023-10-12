@@ -1,5 +1,7 @@
 package dbcrud;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -23,23 +25,30 @@ public class UserInsertTest {
 				 
 				 //db처리 작업
 				 //매개 변수화된 sql문 작성 -  동적 바인딩
-				 String sql = "INSERT INTO users(userid,username,userpassword,userage,useremail) "
-				 		+ "VALUES (?, ?, ?, ?, ?)";
+				 String sql = "INSERT INTO boards(bno,btitle,bcontent,bwriter,bdate,bfilename,bfiledata) "
+				 		+ "VALUES(seq_bno.NEXTVAL,?,?,?,SYSDATE,?,?)";
 				 pstmt = conn.prepareStatement(sql);
 				 // ? 값 지정 
-				 pstmt.setString(1, "cloud2");
-				 pstmt.setString(2, "이구르미");
-				 pstmt.setString(3, "u12345");
-				 pstmt.setInt(4, 40);
-				 pstmt.setString(5, "cloud2@cloud.com");
-				 
-				 
+				 pstmt.setString(1, "notebook2");   
+				 pstmt.setString(2, "LG 그램 노트북입니다.2");
+				 pstmt.setString(3, " KIMHEERIN99");
+				 //사진을 첨부한 경우
+				 pstmt.setString(4, "notebook.PNG");
+				 pstmt.setBlob(5, new FileInputStream("src/dbcrud/notebook.PNG"));
+				 //사진을 첨부하지 않은 경우
+				// pstmt.setString(4, null);
+				// Blob blob = null;
+				// pstmt.setBlob(5, blob);
+				
 				 //sql 실행
 				 int rows = pstmt.executeUpdate();
 				 System.out.println("저장된 행의 수" + rows);
 			} catch (ClassNotFoundException e){			
 				e.printStackTrace();
-			}catch (SQLException e) {
+			}catch(FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			catch (SQLException e) {
 				e.printStackTrace();
 			}finally {
 				if(conn != null) { //연결이 되어 있다면 
