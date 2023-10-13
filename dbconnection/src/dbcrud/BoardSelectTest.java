@@ -36,7 +36,7 @@ public class BoardSelectTest {
 				 				+"ORDER BY bno DESC";
 				 pstmt = conn.prepareStatement(sql);
 				 
-				 pstmt.setString(1,"KIMHEERIN99");
+				 pstmt.setString(1,"cloud");
 				 
 				 ResultSet rs = pstmt.executeQuery();
 				 List<Board> boardList = new ArrayList<>();
@@ -58,13 +58,14 @@ public class BoardSelectTest {
 						 InputStream is = blob.getBinaryStream();
 						 OutputStream os  = 
 								 new FileOutputStream("c:/File/" + board.getBfileData());
-						 
+						 /*
 						 byte [] data = new byte[1024];
 						 while(true) {
 							 int num = is.read();
 							 if(num ==-1) break;
 							 os.write(data,0, num); 
-					 	}
+					 	}*/
+						 is.transferTo(os); // 바이너리 파일 쓰기 (저장 ) 메서드
 						 os.flush();
 						 os.close();
 						 is.close();

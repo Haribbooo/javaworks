@@ -28,7 +28,7 @@ public class UserSelectAllTest {
 				 
 				 //db처리 작업
 				 //매개 변수화된 sql문 작성 -  동적 바인딩
-				 String sql = "SELECT * FROM users ";
+				 String sql = "SELECT * FROM users";
 				 pstmt = conn.prepareStatement(sql);
 				
 				 
