@@ -217,6 +217,9 @@ public class AccountDAO {
 			
 			
 			if(findAccount(ano) !=null) { // 찾는 계좌가 없으면 
+				System.out.println("1.ok|2.Cancel");
+				String menuNo = scanner.nextLine();
+				if(menuNo.equals("1")) {
 				//db 처리	
 				try {
 					conn = JDBCutil.getConnection();
@@ -224,12 +227,17 @@ public class AccountDAO {
 					PreparedStatement pstmt = conn.prepareStatement("DELETE FROM account WHERE ano = ?");					
 					pstmt.setString(1,ano);		
 					pstmt.executeUpdate();
-					
+					System.out.println("삭제 완료");
 					
 				} catch (SQLException e) {
 					e.printStackTrace();
+				}finally{
+					JDBCutil.close(conn, pstmt);
 				}
-				System.out.println("삭제 완료");
+				}else {
+					System.out.println("삭제를 취소합니다.");
+				}
+				
 				break;
 			}else{				
 				System.out.println("계좌가 존재하지 않습니다. 다시 입력해주세요");
