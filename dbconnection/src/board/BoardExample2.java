@@ -204,8 +204,7 @@ public class BoardExample2 {
 		String writer= sc.nextLine();
 		board.setBwriter(writer);
 		
-		//db처리 작업- update
-		
+		//db처리 작업- update	
 		try {
 			String sql = "UPDATE board SET btitle=?, bcontent=? , bwriter=?"
 				      + "WHERE bno =?";
@@ -269,6 +268,15 @@ public class BoardExample2 {
 				pstmt =conn.prepareStatement(sql);
 				//sql 실행
 				pstmt.executeUpdate();
+				//글번호가 삭제후에 이어진 번호 출력되는 문제 발생 (1부터 초기화)
+				sql = "DROP SEQUENCE seq";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+				
+				sql ="CREATE SEQUENCE seq NOCACHE";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+				
 				
 				pstmt.close();
 			} catch (SQLException e) {
