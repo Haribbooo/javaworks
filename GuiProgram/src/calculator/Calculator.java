@@ -12,10 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Calculator extends JFrame {
-
-
-		
+public class Calculator extends JFrame {	
 		//필드
 		String [] operator = {"+","-","*","/"};
 		JComboBox<String> comboBox;
@@ -37,7 +34,7 @@ public class Calculator extends JFrame {
 			//컴포넌트 객체 생성 FlowLayout
 			//
 			pane1.setLayout(new FlowLayout());
-			JTextField text1 = new JTextField(5);
+			JTextField text1 = new JTextField();
 			//콤보박스 
 			comboBox = new JComboBox<>(operator);
 			
@@ -110,6 +107,4 @@ public class Calculator extends JFrame {
 			this.setVisible(true);
 			
 	}
-
-	
 }
